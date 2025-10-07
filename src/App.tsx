@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Detail from "./pages/Detail";
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/mp2">
       <nav
         style={{
           display: "flex",
@@ -26,7 +26,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/detail/:id" element={<Detail />} />
+        <Route path="*" element={<Home />} /> {/* fallback to list */}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
