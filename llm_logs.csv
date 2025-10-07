@@ -1,0 +1,7 @@
+﻿Timestamp,Prompt,Response,Notes
+10/6/2025 9:30,"“My Pokémon API page is blank again, any idea why?”",“Check your useEffect fetch function and make sure you’re returning valid data from the API. Also verify your routes inside <Routes>.”,Fixed data fetch + route setup
+10/6/2025 10:05,“How can I add a search bar to filter Pokémon names as I type?”,“Use a useState hook for the query and apply .filter() on your Pokémon array inside render.”,Added dynamic search functionality
+10/6/2025 11:40,“How do I sort Pokémon by name or ID in ascending/descending order?”,“Create dropdowns for sortBy and order. Use array.sort() based on selected options.”,Implemented sort feature successfully
+10/6/2025 15:15,"“How do I add a filter in the gallery like by Pokémon type (fire, water, etc.)?”",“Add a set of buttons for each unique type and filter your Pokémon list based on selected types.”,Added gallery filters
+10/7/2025 9:20,“My detail page loads but previous and next buttons don’t work.”,“Compute current index from your Pokémon list and use navigate(/detail/${nextId}) for navigation.”,Fixed detail navigation
+10/7/2025 10:00,“How can I make the list text blue and style it better?”,"“Use a CSS class, e.g., .list-item { color: blue; font-weight: 500; } instead of inline styles.”",Improved list UI design
